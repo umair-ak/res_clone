@@ -1,15 +1,24 @@
 <%- include("partials/header"); -%>
-<h1>result</h1>
+<p><b> BE.(CBCS) Feb/Mar-2023 Results </b></p>
 
 <% if(display == true){ %>
     <%- include("partials/marks",{Rollno:Rollno, gender:gender, Name:Name}); -%>
-
 <%}%>
 
-<form action="/" method="post">
-    <input type="number" name="rollno">
-    <button type="submit" name="button">Submit</button>
+<div class="outer">
+    <div class="inputsection bgwhite">
+        <form autocomplete="off" method="post" action="">
+            <input autocomplete="false" name="hidden" type="text" style="display:none;">
+            <label for=""><b>Enter the hall ticket number :</b></label>
+        <input type="number" name="rollno">
+        
+        <button type="submit" name="button" class="red">Submit</button>  
+    </form>
+</div>
+<div class="info">
+    <p class="red" style="margin: 0px;">Please Enter 12 Digit Hall Ticket Number Ex : 160320733021,160320733021</p>
+</div>
+</div>
 
-</form>
 
 <%- include("partials/footer"); -%>

@@ -1,0 +1,29 @@
+html{
+    text-align: center;
+    background-color: #faf0d8;
+}
+
+.red{
+    color:red;
+}
+.bgwhite{
+    background-color:#fefcf5;
+}
+.inputsection{
+    border: 2px solid black;
+    padding: 10px;
+    
+}
+.info{
+    padding: 4px;
+    border :2px solid black;
+    border-top: 0px;
+    
+    font-weight: bold;
+}
+.outer{
+  width: 70%;
+  margin-left: 300px;
+}
+/* purple for the message = 5f5fae */
+/* for table headings = edc987 */
