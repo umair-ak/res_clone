@@ -17,7 +17,7 @@ app.get("/", function(req, res){
     }
     
     res.render("result",{display:shouldDisplay,
-         Rollno:roll, gender:data.getGender(roll), Name:data.getName(roll)
+         Rollno:roll, gender:data.getGender(roll), Name:data.getName(roll),point:data.getPoints(),grade:data.getGrades()
         });
 
     shouldDisplay = false;
