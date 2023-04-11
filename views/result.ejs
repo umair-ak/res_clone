@@ -1,7 +1,11 @@
 <%- include("partials/header"); -%>
 <h1>result</h1>
 
-<h3><%= name %> </h3>
+<% if(display == true){ %>
+    <%- include("partials/marks",{Rollno:Rollno, gender:gender, Name:Name}); -%>
+
+<%}%>
+
 <form action="/" method="post">
     <input type="number" name="rollno">
     <button type="submit" name="button">Submit</button>

@@ -13,10 +13,12 @@ var roll
 app.get("/", function(req, res){
 
     if(!shouldDisplay){
-        res.render("result",{name:""});
+        res.render("result",{display:shouldDisplay});
     }
     
-    res.render("result",{name:data.getName(roll)});
+    res.render("result",{display:shouldDisplay,
+         Rollno:roll, gender:data.getGender(roll), Name:data.getName(roll)
+        });
 
     shouldDisplay = false;
 });
