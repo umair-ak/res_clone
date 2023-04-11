@@ -6,17 +6,27 @@ app.use(bodyParser.urlencoded({extended:true}))
 const ejs = require("ejs");
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"))
+let shouldDisplay = false;
 
-
+var roll 
 
 app.get("/", function(req, res){
-    res.render("result");
+
+    if(!shouldDisplay){
+        res.render("result",{name:""});
+    }
+    
+    res.render("result",{name:data.getName(roll)});
+
+    shouldDisplay = false;
 });
 
 app.post("/",function(req,res){
 
-    var roll = req.body.rollno;
-    console.log(roll);
+    roll = req.body.rollno;
+    shouldDisplay = true;
+    res.redirect("/");
+    
 });
 
 
