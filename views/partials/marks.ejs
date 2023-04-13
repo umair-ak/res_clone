@@ -1,37 +1,88 @@
+<style>
+    td{
+        font-weight: bolder;
+    }
+    th{
+        background-color: #edc987;
+    }
+    table{
+        margin-left: 20%;
+        width: 65%;
+        
+    }
+    table, th, td {
+         border: 1px solid black;
+         border-collapse: collapse;
+    }
+    td{
+        /* padding-right: 25px; */
+        background-color: white;
+    }
+    .subhead{
+        background-color: #faf0d8;
+    }
+    .Lhightlight{
+        background-color: #fefcf5;
+    }
+    .alignleft{
+        text-align: left;
+    }
+
+    .bottominfo{
+        margin: 0px;
+        width: 65%;
+        margin-left: 20%;
+        background-color: white;
+        padding-bottom: 4px;
+        height:60px;
+    }
+    .msg{
+        margin:0px;
+        color:#5f5fae;
+    }
+</style>
 <table>
 
-    <tr>
-        <td>Personal Details</td>
-    </tr>
+    <th colspan="5">
+        Personal Details
+    </th>
     
     <tr>
-        <td>Hall Ticket No.</td>
-        <td><%= Rollno %></td> 
-        <td>Gender</td>
-        <td><%=gender%></td>
+        <td class="Lhightlight">Hall Ticket No.</td>
+        <td class="alignleft"><%= Rollno %></td> 
+        <td class="Lhightlight">Gender</td>
+        <td colspan="2"  class="alignleft"><%= gender %></td>
     </tr>
     <tr>
-        <td>Name</td> 
-        <td><%=Name%></td>  
-        <td>Semister</td> 
-        <td>VI</td>
+        <td class="Lhightlight">Name</td> 
+        <td class="alignleft"><%=Name%></td>  
+        <td class="Lhightlight"  class="alignleft">Semister</td> 
+        <td colspan="2" class="alignleft">V</td>
     </tr>
-   
+    <tr>
+        <td class="Lhightlight">Course</td> 
+        <td class="alignleft">BE(CSE)</td>  
+        <td class="Lhightlight">Medium</td> 
+        <td colspan="2" class="alignleft">=</td>
+    </tr>
+
+
+
+    <th colspan="5">
+        Marks Details
+    </th>
 
     <tr>
-        <td>Marks Details</td>
-    </tr>
-    <tr>
-        <td>Sub Code</td>
-        <td>Subject Name</td>
-        <td>Credits</td>
-        <td>Grade Points</td>
-        <td>Grade Secured</td>
+        <td class="subhead">Sub Code</td>
+        <td class="subhead">Subject Name</td>
+        <td class="subhead">Credits</td>
+        <td class="subhead">Grade Points</td>
+        <td class="subhead">Grade Secured</td>
     </tr>
 
    <tr>
     <td>PC501CS</td>
-    <td>Software Engineering</td>
+    <td class="alignleft">Software Engineering</td>
     <td>3</td>
     <td><%= point[0] %></td>
     <td><%= grade[0] %></td>
@@ -39,7 +90,7 @@
    
    <tr>
    <td>PC551CS</td>
-   <td>Software Engineering Lab</td>
+   <td class="alignleft">Software Engineering Lab</td>
    <td>1</td>
    <td><%= point[1] %></td>
    <td><%= grade[1] %></td>
@@ -47,7 +98,7 @@
 
    <tr>
     <td>PC504CS</td>
-    <td>Artificial Intelligence</td>
+    <td class="alignleft">Artificial Intelligence</td>
     <td>3</td>
     <td><%= point[2] %></td>
     <td><%= grade[2] %></td>
@@ -55,7 +106,7 @@
 
    <tr>
     <td>PC502CS</td>
-    <td>Principles of Programming lang</td>
+    <td class="alignleft">Principles of Programming lang</td>
     <td>3</td>
     <td><%= point[3] %></td>
     <td><%= grade[3] %></td>
@@ -63,43 +114,58 @@
 
    <tr>
     <td>PE516CS</td>
-    <td>Blockchain Technology</td>
+    <td class="alignleft">Blockchain Technology</td>
     <td>3</td>
     <td><%= point[4] %></td>
     <td><%= grade[4] %></td>
    </tr>
 
-   <tr>
+   <tr class="border">
     <td>PC552CS</td>
-    <td>Artificial Intelligence Lab</td>
+    <td class="alignleft">Artificial Intelligence Lab</td>
     <td>1</td>
     <td><%= point[5] %></td>
     <td><%= grade[5] %></td>
    </tr>
    
-   <tr>
+   <tr class="border">
     <td>PC553CS</td>
-    <td>Computer Networks Lab</td>
+    <td class="alignleft">Computer Networks Lab</td>
     <td>1</td>
     <td><%= point[6] %></td>
     <td><%= grade[6] %></td>
    </tr>
 
-   <tr>
+   <tr class="border">
     <td>PC505CS</td>
-    <td>Computer Networks</td>
+    <td class="alignleft">Computer Networks</td>
     <td>3</td>
     <td><%= point[7] %></td>
     <td><%= grade[7] %></td>
    </tr>
    
-   <tr>
+   <tr class="border">
     <td>PC503CS</td>
-    <td>Automata Lang & Computation</td>
+    <td class="alignleft">Automata Lang & Computation</td>
     <td>3</td>
     <td><%= point[8] %></td>
     <td><%= grade[8] %></td>
    </tr>
 
+   <th colspan="5">Result</th>
+   <tr>
+    <td class="subhead">Semester</td>
+    <td class="subhead" colspan="2">Result with SGPA</td>
+    <td class="subhead" colspan="2">Over all CGPA</td>
+   </tr>
 
+   <tr>
+    <td>5</td>
+    <td colspan="2">promoted</td>
+    <td colspan="2">-</td>
+   </tr>
 </table>
+<div class="bottominfo">
+    <p class="msg">This information is provided to the candidate on his/her online request and is only a protype list</p>
+    <button style="margin-top:10px">Print</button>
+</div>
